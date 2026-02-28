@@ -20,7 +20,7 @@
     }
 
     .logo {
-      height: 40px;
+      height: 64px;
       width: auto;
     }
 
@@ -52,26 +52,39 @@
       overflow-y: auto;
     }
 
+    .headline-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
     h1 {
       font-family: 'Futura', 'Trebuchet MS', Helvetica, sans-serif;
       font-size: 2.6rem;
       letter-spacing: 0.05em;
       font-weight: 700;
       white-space: nowrap;
-      margin-bottom: 20px;
+    }
+
+    .nsrl-logo {
+      height: 72px;
+      width: auto;
+      flex-shrink: 0;
     }
 
     .taglines p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #ccc;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .taglines .highlight {
       font-weight: 700;
       font-style: italic;
       color: #fff;
-      margin-top: 10px;
+      font-size: 1.3rem;
+      margin-top: 12px;
     }
 
     .intro {
@@ -90,7 +103,7 @@
     }
 
     section h2 {
-      font-size: 1.05rem;
+      font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 8px;
       color: #fff;
@@ -164,8 +177,16 @@
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         white-space: normal;
+      }
+
+      .nsrl-logo {
+        height: 52px;
+      }
+
+      .logo {
+        height: 48px;
       }
     }
   </style>
@@ -182,7 +203,10 @@
     </div>
 
     <div class="content-column">
-      <h1>COME RUN WITH US!</h1>
+      <div class="headline-row">
+        <h1>COME RUN WITH US!</h1>
+        <img src="nsrl-logo.png" alt="Nike Sport Research Lab" class="nsrl-logo">
+      </div>
 
       <div class="taglines">
         <p>Do you enjoy running?</p>
