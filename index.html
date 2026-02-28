@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Come Run With Us | Nike Sport Research Lab</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background: #111;
+      color: #f0f0f0;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #fff;
+      padding: 16px 32px;
+    }
+
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 72px);
+    }
+
+    .image-column {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-column img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .content-column {
+      padding: 48px 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-family: 'Futura', 'Trebuchet MS', Helvetica, sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+
+    .taglines p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 4px;
+    }
+
+    .taglines .highlight {
+      font-weight: 700;
+      font-style: italic;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    .intro {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #bbb;
+      line-height: 1.7;
+    }
+
+    .intro p + p {
+      margin-top: 10px;
+    }
+
+    section {
+      margin-top: 24px;
+    }
+
+    section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      color: #bbb;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    ul ul {
+      margin-top: 4px;
+      list-style: circle;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .cta-wrapper {
+      margin-top: 32px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #fff;
+      color: #111;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 14px 44px;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .cta-button:hover {
+      background: #e0e0e0;
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #555;
+      font-size: 0.75rem;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 900px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .image-column {
+        height: 50vw;
+        min-height: 280px;
+        max-height: 420px;
+      }
+
+      .content-column {
+        padding: 32px 24px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="nike-innovation-logo.png" alt="Nike Innovation" class="logo">
+  </header>
+
+  <div class="page-layout">
+    <div class="image-column">
+      <img src="lab-runner.png" alt="Runner being tested in the Nike Sport Research Lab">
+    </div>
+
+    <div class="content-column">
+      <h1>COME RUN WITH US!</h1>
+
+      <div class="taglines">
+        <p>Do you enjoy running?</p>
+        <p>Like maybe a little too much?</p>
+        <p>Like you've had a friend describe you as "crazy" for your running habits?</p>
+        <p class="highlight">You're just our type.</p>
+      </div>
+
+      <div class="intro">
+        <p>We are searching nationwide for high achieving runners who regularly put in the big miles because just like you, we have new trails to explore, and we can't do it alone.</p>
+        <p>The Nike Sport Research Lab is now accepting applications for a brand-new one-of-a-kind research project focused on ultra distance running.</p>
+      </div>
+
+      <section>
+        <h2>What you get:</h2>
+        <ul>
+          <li>Complete physiological, biomechanical, psychological testing and results and interpretation on a regular basis</li>
+          <li>Full time coaching from Nike Applied Performance Scientists</li>
+          <li>Education sessions on topics relevant to your sport (nutrition, strength training, altitude, heat, etc.)</li>
+          <li>Footwear and apparel product support</li>
+          <li>Modest financial compensation</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What you need to know before you apply:</h2>
+        <ul>
+          <li>This is a long-term research program and requires you to be in Beaverton, OR for about 15 weeks
+            <ul>
+              <li>Why? Because we want to fully understand you as an athlete and how you adapt over a complete training cycle.</li>
+              <li>Relocation assistance and support will be provided</li>
+            </ul>
+          </li>
+          <li>We cannot accept applications from athletes who have a sponsorship from another footwear/apparel brand
+            <ul>
+              <li>If you think your sponsors are <span class="underline">not</span> a conflict, please note in the application</li>
+            </ul>
+          </li>
+          <li>You need to be able to run for 3+ hrs in one run multiple times in a training cycle (we said BIG miles!)</li>
+        </ul>
+      </section>
+
+      <div class="cta-wrapper">
+        <a href="#" class="cta-button">APPLY NOW</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; Nike, Inc. All rights reserved.
+  </footer>
+
+</body>
+</html>
