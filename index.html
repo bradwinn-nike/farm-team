@@ -52,13 +52,6 @@
       overflow-y: auto;
     }
 
-    .headline-row {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-
     h1 {
       font-family: 'Futura', 'Trebuchet MS', Helvetica, sans-serif;
       font-size: 2.6rem;
@@ -67,10 +60,15 @@
       white-space: nowrap;
     }
 
+    .nsrl-logo-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin: 28px 0;
+    }
+
     .nsrl-logo {
-      height: 72px;
+      height: 160px;
       width: auto;
-      flex-shrink: 0;
     }
 
     .taglines p {
@@ -182,7 +180,7 @@
       }
 
       .nsrl-logo {
-        height: 52px;
+        height: 120px;
       }
 
       .logo {
@@ -203,10 +201,7 @@
     </div>
 
     <div class="content-column">
-      <div class="headline-row">
-        <h1>COME RUN WITH US!</h1>
-        <img src="nsrl-logo.png" alt="Nike Sport Research Lab" class="nsrl-logo">
-      </div>
+      <h1>COME RUN WITH US!</h1>
 
       <div class="taglines">
         <p>Do you enjoy running?</p>
@@ -218,6 +213,10 @@
       <div class="intro">
         <p>We are searching nationwide for high achieving runners who regularly put in the big miles because just like you, we have new trails to explore, and we can't do it alone.</p>
         <p>The Nike Sport Research Lab is now accepting applications for a brand-new one-of-a-kind research project focused on ultra distance running.</p>
+      </div>
+
+      <div class="nsrl-logo-wrapper">
+        <img src="nsrl-logo.png" alt="Nike Sport Research Lab" class="nsrl-logo">
       </div>
 
       <section>
