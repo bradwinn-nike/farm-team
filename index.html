@@ -8,40 +8,37 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #000;
-      color: #fff;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #111;
+      color: #f0f0f0;
       line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Header ── */
     header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
+      background: #fff;
+      padding: 16px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 24px 48px;
     }
 
-    .logo { height: 56px; width: auto; }
-    .nsrl-logo { height: 56px; width: auto; }
+    .logo {
+      height: 64px;
+      width: auto;
+    }
 
-    /* ── Hero ── */
-    .hero {
+    .page-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: calc(100vh - 72px);
+    }
+
+    .image-column {
       position: relative;
-      height: 100vh;
-      min-height: 600px;
-      display: flex;
-      align-items: flex-end;
       overflow: hidden;
     }
 
-    .hero-bg {
+    .image-column img {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -50,197 +47,147 @@
       object-position: center top;
     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.85) 0%,
-        rgba(0,0,0,0.4) 40%,
-        rgba(0,0,0,0.1) 70%,
-        rgba(0,0,0,0.3) 100%
-      );
+    .content-column {
+      padding: 48px 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-y: auto;
     }
 
-    .hero-content {
-      position: relative;
-      padding: 0 48px 64px;
-      max-width: 900px;
-    }
-
-    .hero h1 {
+    h1 {
       font-family: 'Futura', 'Trebuchet MS', Helvetica, sans-serif;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      font-weight: 900;
-      letter-spacing: 0.03em;
-      line-height: 1.05;
+      font-size: 2.6rem;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      white-space: nowrap;
       color: #FF5500;
-      text-transform: uppercase;
-      margin-bottom: 24px;
     }
 
-    .hero .tagline {
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      color: rgba(255,255,255,0.85);
+    .nsrl-logo {
+      height: 64px;
+      width: auto;
+    }
+
+    .taglines p {
+      font-size: 1.2rem;
+      color: #ccc;
       margin-bottom: 6px;
-      font-weight: 400;
     }
 
-    .hero .highlight {
+    .taglines .highlight {
       font-weight: 700;
       font-style: italic;
       color: #fff;
-      font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-      margin-top: 16px;
+      font-size: 1.3rem;
+      margin-top: 12px;
     }
 
-    .hero .cta-button {
+    .intro {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #bbb;
+      line-height: 1.7;
+    }
+
+    .intro p + p {
+      margin-top: 10px;
+    }
+
+    section {
+      margin-top: 24px;
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #FF5500;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      color: #bbb;
+    }
+
+    ul li {
+      margin-bottom: 4px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    ul ul {
+      margin-top: 4px;
+      list-style: circle;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .cta-wrapper {
       margin-top: 32px;
     }
 
-    /* ── Content Section ── */
-    .content-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 48px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-    }
-
-    .content-intro h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      line-height: 1.15;
-      margin-bottom: 24px;
-    }
-
-    .content-intro p {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    .details-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .detail-block h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: #FF5500;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #FF5500;
-      display: inline-block;
-    }
-
-    .detail-block ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .detail-block li {
-      font-size: 0.95rem;
-      color: rgba(255,255,255,0.7);
-      padding: 6px 0;
-      padding-left: 16px;
-      position: relative;
-      line-height: 1.6;
-    }
-
-    .detail-block li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 14px;
-      width: 6px;
-      height: 6px;
-      background: #FF5500;
-      border-radius: 50%;
-    }
-
-    .detail-block li li::before {
-      background: rgba(255,255,255,0.4);
-      width: 4px;
-      height: 4px;
-      top: 15px;
-    }
-
-    .detail-block ul ul {
-      margin-top: 4px;
-    }
-
-    .detail-block ul ul li {
-      font-size: 0.9rem;
-      padding-left: 20px;
-    }
-
-    .underline { text-decoration: underline; }
-
-    /* ── CTA ── */
     .cta-button {
       display: inline-block;
       background: #fff;
-      color: #000;
+      color: #111;
       font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 16px 48px;
-      border-radius: 30px;
+      letter-spacing: 0.04em;
+      padding: 14px 44px;
+      border-radius: 40px;
       text-decoration: none;
-      transition: all 0.25s ease;
+      transition: background 0.2s, transform 0.15s;
     }
 
     .cta-button:hover {
-      background: #FF5500;
-      color: #fff;
-      transform: scale(1.04);
+      background: #e0e0e0;
+      transform: scale(1.03);
     }
 
-    .cta-section {
-      text-align: center;
-      padding: 0 48px 80px;
-    }
-
-    .cta-section .cta-button {
-      font-size: 1.15rem;
-      padding: 20px 64px;
-    }
-
-    /* ── Footer ── */
     footer {
       text-align: center;
-      padding: 32px 48px;
-      color: rgba(255,255,255,0.3);
+      padding: 24px;
+      color: #555;
       font-size: 0.75rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid #222;
     }
 
-    /* ── Responsive ── */
     @media (max-width: 900px) {
-      header { padding: 16px 24px; }
-      .logo { height: 40px; }
-      .nsrl-logo { height: 40px; }
-
-      .hero { min-height: 500px; }
-      .hero-content { padding: 0 24px 48px; }
-
-      .content-section {
+      .page-layout {
         grid-template-columns: 1fr;
-        padding: 48px 24px;
-        gap: 40px;
+        min-height: auto;
       }
 
-      .cta-section { padding: 0 24px 48px; }
+      .image-column {
+        height: 50vw;
+        min-height: 280px;
+        max-height: 420px;
+      }
+
+      .content-column {
+        padding: 32px 24px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        white-space: normal;
+      }
+
+      .nsrl-logo {
+        height: 48px;
+      }
+
+      .logo {
+        height: 48px;
+      }
+
+      header {
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
@@ -251,29 +198,28 @@
     <img src="NSRL_BrandMark_Origin_Blue.svg" alt="Nike Sport Research Lab" class="nsrl-logo">
   </header>
 
-  <section class="hero">
-    <img src="lab-runner.png" alt="Runner being tested in the Nike Sport Research Lab" class="hero-bg">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Come Run<br>With Us.</h1>
-      <p class="tagline">Do you enjoy running?</p>
-      <p class="tagline">Like maybe a little too much?</p>
-      <p class="tagline">Like you've had a friend describe you as "crazy" for your running habits?</p>
-      <p class="tagline highlight">You're just our type.</p>
-      <a href="#details" class="cta-button">Learn More</a>
-    </div>
-  </section>
-
-  <div class="content-section" id="details">
-    <div class="content-intro">
-      <h2>We're searching for runners who put in the big miles.</h2>
-      <p>We are searching nationwide for high achieving runners who regularly put in the big miles because just like you, we have new trails to explore, and we can't do it alone.</p>
-      <p>The Nike Sport Research Lab is now accepting applications for a brand-new one-of-a-kind research project focused on ultra distance running.</p>
+  <div class="page-layout">
+    <div class="image-column">
+      <img src="lab-runner.png" alt="Runner being tested in the Nike Sport Research Lab">
     </div>
 
-    <div class="details-grid">
-      <div class="detail-block">
-        <h3>What You Get</h3>
+    <div class="content-column">
+      <h1>COME RUN WITH US!</h1>
+
+      <div class="taglines">
+        <p>Do you enjoy running?</p>
+        <p>Like maybe a little too much?</p>
+        <p>Like you've had a friend describe you as "crazy" for your running habits?</p>
+        <p class="highlight">You're just our type.</p>
+      </div>
+
+      <div class="intro">
+        <p>We are searching nationwide for high achieving runners who regularly put in the big miles because just like you, we have new trails to explore, and we can't do it alone.</p>
+        <p>The Nike Sport Research Lab is now accepting applications for a brand-new one-of-a-kind research project focused on ultra distance running.</p>
+      </div>
+
+      <section>
+        <h2>What you get:</h2>
         <ul>
           <li>Complete physiological, biomechanical, psychological testing and results and interpretation on a regular basis</li>
           <li>Full time coaching from Nike Applied Performance Scientists</li>
@@ -281,10 +227,10 @@
           <li>Footwear and apparel product support</li>
           <li>Modest financial compensation</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="detail-block">
-        <h3>Before You Apply</h3>
+      <section>
+        <h2>What you need to know before you apply:</h2>
         <ul>
           <li>This is a long-term research program and requires you to be in Beaverton, OR for about 15 weeks
             <ul>
@@ -299,12 +245,12 @@
           </li>
           <li>You need to be able to run for 3+ hrs in one run multiple times in a training cycle (we said BIG miles!)</li>
         </ul>
+      </section>
+
+      <div class="cta-wrapper">
+        <a href="#" class="cta-button">APPLY NOW</a>
       </div>
     </div>
-  </div>
-
-  <div class="cta-section">
-    <a href="#" class="cta-button">Apply Now</a>
   </div>
 
   <footer>
