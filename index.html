@@ -27,32 +27,39 @@
       width: auto;
     }
 
-    .page-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: calc(100vh - 72px);
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 96px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
     }
 
-    .image-column {
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-bg-panel {
       position: relative;
       overflow: hidden;
     }
 
-    .image-column img {
-      position: absolute;
-      inset: 0;
+    .hero-bg-panel img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center;
+      filter: brightness(0.35);
     }
 
-    .content-column {
-      padding: 48px 48px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow-y: auto;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 64px 60px;
+      max-width: 720px;
     }
 
     h1 {
@@ -174,36 +181,33 @@
     }
 
     @media (max-width: 900px) {
-      .page-layout {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-
-      .image-column {
-        height: 50vw;
-        min-height: 280px;
-        max-height: 420px;
-      }
-
-      .content-column {
-        padding: 32px 24px;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-        white-space: normal;
-      }
-
-      .nsrl-logo {
-        height: 48px;
+      header {
+        padding: 12px 20px;
       }
 
       .logo {
         height: 48px;
       }
 
-      header {
-        padding: 12px 20px;
+      .nsrl-logo {
+        height: 48px;
+      }
+
+      .hero-bg {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-bg-panel:nth-child(2) {
+        display: none;
+      }
+
+      .hero-content {
+        padding: 40px 24px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        white-space: normal;
       }
     }
   </style>
@@ -215,12 +219,17 @@
     <img src="NSRL_BrandMark_Origin_Blue.svg" alt="Nike Sport Research Lab" class="nsrl-logo">
   </header>
 
-  <div class="page-layout">
-    <div class="image-column">
-      <img src="lab-runner.png" alt="Runner being tested in the Nike Sport Research Lab">
+  <div class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-panel">
+        <img src="acg-shoe.png" alt="ACG trail shoe">
+      </div>
+      <div class="hero-bg-panel">
+        <img src="acg-shirt.png" alt="ACG mesh top">
+      </div>
     </div>
 
-    <div class="content-column">
+    <div class="hero-content">
       <h1>COME RUN WITH US!</h1>
 
       <div class="taglines">
