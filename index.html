@@ -150,10 +150,27 @@
 
     footer {
       text-align: center;
-      padding: 24px;
+      padding: 24px 32px;
       color: #555;
       font-size: 0.75rem;
       border-top: 1px solid #222;
+    }
+
+    .footer-links {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: #999;
+      text-decoration: none;
+      margin: 0 16px;
+      font-size: 0.8rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
     }
 
     @media (max-width: 900px) {
@@ -254,6 +271,11 @@
   </div>
 
   <footer>
+    <div class="footer-links">
+      <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.innovation.web&country=US&language=en" target="_blank">Privacy Policy</a>
+      <a href="https://agreementservice.svs.nike.com/us/en_us/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.nikedotcom.web&country=us&language=en&requestType=redirect" target="_blank">Terms of Use</a>
+      <a href="https://innovation.nike.com/faq" target="_blank">FAQ</a>
+    </div>
     &copy; Nike, Inc. All rights reserved.
   </footer>
 
