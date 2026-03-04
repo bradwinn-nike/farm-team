@@ -59,7 +59,7 @@
       position: relative;
       z-index: 2;
       padding: 64px 60px;
-      max-width: 860px;
+      max-width: 1100px;
       margin: 0 auto;
       text-align: center;
     }
@@ -80,7 +80,7 @@
 
     .taglines p {
       font-size: 1.4rem;
-      color: #ccc;
+      color: #e0e0e0;
       margin-bottom: 6px;
     }
 
@@ -95,7 +95,7 @@
     .intro {
       margin-top: 24px;
       font-size: 1.05rem;
-      color: #bbb;
+      color: #ddd;
       line-height: 1.7;
     }
 
@@ -103,26 +103,33 @@
       margin-top: 10px;
     }
 
+    .sections-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
     section {
-      margin-top: 24px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 28px 28px;
+      text-align: left;
     }
 
     section h2 {
       font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: #FF5500;
     }
 
     ul {
       list-style: disc;
       padding-left: 20px;
-      color: #bbb;
-    }
-
-    ul {
+      color: #ddd;
       text-align: left;
-      display: inline-block;
     }
 
     ul li {
@@ -216,6 +223,10 @@
         font-size: 1.8rem;
         white-space: normal;
       }
+
+      .sections-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -229,7 +240,7 @@
   <div class="hero">
     <div class="hero-bg">
       <div class="hero-bg-panel">
-        <img src="acg-shoe.png" alt="ACG trail shoe">
+        <img src="acg-shoe-2.png" alt="ACG trail shoe">
       </div>
       <div class="hero-bg-panel">
         <img src="acg-shirt.png" alt="ACG mesh top">
@@ -251,6 +262,7 @@
         <p>The Nike Sport Research Lab is now accepting applications for a brand-new one-of-a-kind research project focused on ultra distance running.</p>
       </div>
 
+      <div class="sections-grid">
       <section>
         <h2>What you get:</h2>
         <ul>
@@ -279,6 +291,7 @@
           <li>You need to be able to run for 3+ hrs in one run multiple times in a training cycle (we said BIG miles!)</li>
         </ul>
       </section>
+      </div>
 
       <div class="cta-wrapper">
         <a href="#" class="cta-button">APPLY NOW</a>
